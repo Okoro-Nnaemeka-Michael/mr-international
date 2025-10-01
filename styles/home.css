@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --quotefont: "Lato", serif;
+    --mainfont: "Rubik", sans-serif;
+    --optfont: "Nunito", sans-serif;
+    --grey: #5e5e5e;
+    --green: #2dca72;
+    --black: #293241;
+    --lightgreen: #f2fff8;
+    --page-margin: 2em;
+    --page-margin-sm: 1em;
+    
+}

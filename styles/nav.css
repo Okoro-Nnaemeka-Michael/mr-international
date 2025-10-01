@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --quotefont: "Lato", serif;
+    --mainfont: "Rubik", sans-serif;
+    --optfont: "Nunito", sans-serif;
+    --grey: #5e5e5e;
+    --green: #2dca72;
+    --black: #293241;
+    --lightgreen: #f2fff8;
+    --page-margin: 2em;
+    --page-margin-sm: 1em;
+}
+
+/* BODY*/
+body {
+    background-color: #fff;
+    font-family: var(--mainfont);
+}
+
+/* NAV BAR */
+.nav {
+    font-family: var(--optfont);
+    padding: 40px 40px 15px 50px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    align-items: center;
+    background: white;
+    font-size: 16px;
+}
+
+.mr-logo {
+    width: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-element {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.list {
+    text-decoration: none;    
+    color: #3a4094;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px white;
+}
+ 
+.active {
+    color: rgb(153, 2, 2);
+}
+
+.list:hover {
+    border-bottom:  2px solid #3a4094;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #3a4094;
+    padding-right: 40px;
+}
+
+/* MAIN */
+.carousel {
+    width: 100vw;
+    height: 69vh;
+    background-color: rgb(49, 47, 47);
+}
