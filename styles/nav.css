@@ -83,3 +83,8 @@ body {
     height: 69vh;
     background-color: rgb(49, 47, 47);
 }
+
+h1 {
+    text-align: center;
+    padding-top: 30px;
+}
