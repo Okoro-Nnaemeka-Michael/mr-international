@@ -78,9 +78,9 @@ body {
 }
 
 /* MAIN */
-.carousel {
+.carousel-section {
     width: 100vw;
-    height: 69vh;
+    height: 70vh;
     background-color: rgb(49, 47, 47);
 }
 
