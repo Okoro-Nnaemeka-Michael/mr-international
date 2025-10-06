@@ -30,7 +30,7 @@ body {
 /* STICKY NAVBAR */
 .nav {
   font-family: var(--optfont);
-  padding: 35px 35px;
+  padding: 30px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +45,14 @@ body {
 /* LOGO */
 .mr-logo {
   width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+    display: block;
+    height:  60px;
+    object-fit: contain;
 }
 
 /* NAV LINKS */
@@ -53,6 +61,8 @@ body {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .list {
@@ -63,8 +73,7 @@ body {
 }
 
 .list:hover {
-  color: #2dca72;
-  border-bottom: 2px solid #2dca72;
+  border-bottom: 2px solid #3a4094;
   padding-bottom: 5px;
 }
 
@@ -75,6 +84,7 @@ body {
 /* NAV ICONS */
 .nav-icons {
   display: flex;
+  align-items: center;
   gap: 15px;
   color: #3a4094;
   font-size: 18px;
