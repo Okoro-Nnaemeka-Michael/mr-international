@@ -1,80 +1,157 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --quotefont: "Lato", serif;
-    --mainfont: "Rubik", sans-serif;
-    --optfont: "Nunito", sans-serif;
-    --grey: #5e5e5e;
-    --green: #2dca72;
-    --black: #293241;
-    --lightgreen: #f2fff8;
-    --page-margin: 2em;
-    --page-margin-sm: 1em;
-}
-
-/* BODY*/
-body {
-    background-color: #fff;
-    font-family: var(--mainfont);
-}
-
 /* NAV BAR */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root {
+  --quotefont: "Lato", serif;
+  --mainfont: "Rubik", sans-serif;
+  --optfont: "Nunito", sans-serif;
+  --grey: #5e5e5e;
+  --green: #2dca72;
+  --black: #293241;
+  --lightgreen: #f2fff8;
+  --page-margin: 2em;
+  --page-margin-sm: 1em;
+}
+
+/* BODY */
+body {
+  background-color: #fff;
+  font-family: var(--mainfont);
+}
+
+/* STICKY NAVBAR */
 .nav {
-    font-family: var(--optfont);
-    padding: 40px 40px 15px 50px;
-    justify-content: space-between;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    align-items: center;
-    background: white;
-    font-size: 16px;
+  font-family: var(--optfont);
+  padding: 35px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
 }
 
+/* LOGO */
 .mr-logo {
-    width: 133px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 120px;
 }
 
+/* NAV LINKS */
 .list-element {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .list {
-    text-decoration: none;    
-    color: #3a4094;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px white;
-}
- 
-.active {
-    color: rgb(153, 2, 2);
+  color: #3a4094;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .list:hover {
-    border-bottom:  2px solid #3a4094;
-    padding-bottom: 5px;
+  color: #2dca72;
+  border-bottom: 2px solid #2dca72;
+  padding-bottom: 5px;
 }
 
+.active {
+  color: rgb(153, 2, 2);
+}
+
+/* NAV ICONS */
 .nav-icons {
-    display: flex;
+  display: flex;
+  gap: 15px;
+  color: #3a4094;
+  font-size: 18px;
+}
+
+/* HAMBURGER ICON */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #3a4094;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+  .list-element {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 20px;
-    align-items: center;
-    color: #3a4094;
-    padding-right: 40px;
+    padding: 20px 30px;
+    border-top: 1px solid #eee;
+    transform: translateX(120%);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .list-element.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    background: var(--grey); /* default background for the opened menu */
+  }
+
+  /* when menu is opened, style menu links */
+  .list-element.show .list {
+    color: #fff;
+    width: 100%;
+    padding: 10px 15px;
+    /* background: gray; */
+    border-radius: 4px;
+    border-bottom: none;
+    transition: background 0.3s;
+  }
+
+  /* active (Home) gets red background */
+  .list-element.show .list.active {
+      width: 100%;
+      background: red;
+    color: #fff;
+  }
+
+  .list-element.show .list:hover {
+    background: #555;
+    width: inherit;
+    color: #fff;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: blue;
+  }
 }
 
 /* MAIN */
