@@ -22,7 +22,7 @@
 
 .carousel-section {
     width: 100%;
-    height: 69vh;
+    height: 70vh;
     background-color: var(--grey);
     overflow: hidden; 
 }
@@ -41,10 +41,19 @@
   height: 100%;
 }
 
-.carousel-caption,
-.carousel-control-prev,
-.carousel-control-next {
-  z-index: 2;
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  z-index: 2; /* above overlay */
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-caption p {
+  position: absolute;
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
 .carousel-image {
@@ -53,12 +62,18 @@
   object-fit: cover;
 }
 
+.carousel-caption span {
+  color: #ff4040;
+  font-weight: 700;
+}
+
 .carousel-bg {
   width: 100%;
   height: 100vh; /* full screen height */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 /* Assign each slide its own background image */
@@ -76,6 +91,9 @@
 .slide4 {
   background-image: url('../assets/img/slide4.jpg');
 }
+.slide5 {
+  background-image: url('../assets/img/teens-tech-camp.jpg');
+}
 
 /* Optional: dark overlay for better caption visibility */
 .carousel-bg::before {
@@ -83,5 +101,98 @@
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+/* DESCRIPTION */
+
+.description .commitment-header {
+  margin-bottom: 13px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--mainfont);
+  text-transform: uppercase;
+  background: linear-gradient(to left, #3786d5, #32405b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.description p {
+  text-align: center;
+  font-size: 19px;
+  color: black;
+  line-height: 25px;
+  word-spacing: 5px;
+}
+.description span {
+  display: block;
+}
+
+/* OFFER */
+.our-offer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-family: var(--mainfont);
+  text-transform: uppercase;
+  background: linear-gradient(to left, #3786d5, #32405b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.offer-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px;
+}
+
+.card {
+  width: 32%;
+  height: 200px;
+  background: white; 
+  border-radius: 10px;
+  /* box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.card1 {
+  background: linear-gradient(to right, #2e384d, #008bfd);
+}
+.card2 {
+  background-color: white;
+}
+.card3 {
+    background: linear-gradient(to left, #2e384d, #008bfd);
+}
+
+.card-img {
+  height: 35%;
+  margin-top: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-text p{
+  font-size: 18px;
+  padding: 15px;
+  text-align: justify;
+  word-spacing: -1px;
+}
+
+.offer-items .service {
+   background: linear-gradient(135deg, #1c283d, #008bfd); 
+}
+.offer-items .verify {
+   background: linear-gradient(135deg, #008bfd, #1c283d); 
 }
 

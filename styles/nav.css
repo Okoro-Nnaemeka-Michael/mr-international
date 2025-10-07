@@ -25,19 +25,22 @@
 body {
   background-color: #fff;
   font-family: var(--mainfont);
+  overflow-x: hidden;
 }
 
 /* STICKY NAVBAR */
 .nav {
   font-family: var(--optfont);
-  padding: 30px 35px;
+  padding: 0 35px;
+  padding-top: 40px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #fff;
+  background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: all 0.3s ease-in-out;
 }
