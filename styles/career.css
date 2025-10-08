@@ -11,7 +11,7 @@
     --quotefont: "Lato", serif;
     --mainfont: "Rubik", sans-serif;
     --optfont: "Nunito", sans-serif;
-    --grey: #5e5e5e;
+    --grey: #474343;
     --green: #2dca72;
     --black: #293241;
     --lightgreen: #f2fff8;
@@ -23,6 +23,7 @@
 /* HERO SECTION */
 
 .carousel-section {
+    font-family: var(--optfont);
     background-image: url('../assets/img/career_1.jpg');
     background-size: cover;
     background-position: center;
@@ -31,6 +32,25 @@
     background-blend-mode: overlay;
     color: #fff;
     margin-top: 50px;
+}
+
+.carousel-section h1{
+    font-weight: 700;
+    font-size: 2.5em;
+    left: 1px;
+    position: relative;
+    top: 40%;
+    font-family: var(--mainfont);
+}
+
+.carousel-section p {
+    font-size: 1.1em;
+    left: 10%;
+    top: 38%;
+    position: relative;
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
 }
 
 section {
