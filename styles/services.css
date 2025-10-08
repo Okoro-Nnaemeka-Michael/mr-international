@@ -1,3 +1,14 @@
+.carousel-section {
+    background-image: url('../assets/img/career_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    background-color: var(--grey);
+    background-blend-mode: overlay;
+    color: #fff;
+    margin-top: 50px;
+}
+
 .services {
   display: flex;
   flex-direction: column;
@@ -5,7 +16,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 40px;
 }
 
 .service-item {
@@ -18,7 +29,6 @@
 }
 
 .service-img {
-  /* flex: 1; */
   width: 300px;
 }
 

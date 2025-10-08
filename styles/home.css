@@ -17,7 +17,6 @@
     --lightgreen: #f2fff8;
     --page-margin: 2em;
     --page-margin-sm: 1em;
-    
 }
 
 .carousel-section {
@@ -45,8 +44,7 @@
 .carousel-caption {
   position: absolute;
   top: 44%;
-  left: 30%;
-  font-size: 30px;
+  left: 20%;
   z-index: 2; /* above overlay */
   color: #fff;
   text-align: center;
@@ -301,8 +299,9 @@
 }
 
 .uniqueness ul li::before {
-  content: "✔";                  /* Checkmark bullet */
-  color: #3102da;
+  font-family: "Font Awesome 6 Free"; /* required */
+  content: "\f058";                  /* Checkmark bullet */
+  color: #024a92;
   font-weight: bold;
   position: absolute;
   left: 0;
