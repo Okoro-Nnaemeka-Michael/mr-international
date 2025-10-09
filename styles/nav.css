@@ -69,18 +69,38 @@ body {
   padding: 0;
 }
 
+/* NAV LINKS */
 .list {
+  position: relative;
   color: #3a4094;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s;
+  padding-bottom: 8px; /* keeps spacing consistent */
 }
 
+/* animated underline for all links */
+.list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #3a4094;
+  transition: width 0.4s ease, background-color 0.3s ease;
+}
+
+/* hover animation */
 .list:hover {
-  border-bottom: 2px solid #3a4094;
-  padding-bottom: 5px;
+  color: #1f266e;
 }
 
+.list:hover::after {
+  width: 100%;
+}
+
+/* active link (current page) */
 .active {
   color: rgb(153, 2, 2);
 }
@@ -143,11 +163,11 @@ body {
   }
 
   /* active (Home) gets red background */
-  .list-element.show .list.active {
+ .list-element.show .list.active {
       width: 100%;
       background: red;
     color: #fff;
-  }
+  } 
 
   .list-element.show .list:hover {
     background: #555;
