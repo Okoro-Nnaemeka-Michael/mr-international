@@ -46,7 +46,7 @@
   position: absolute;
   top: 44%;
   left: 22%;
-  z-index: 2; /* above overlay */
+  z-index: 2; 
   color: #fff;
   text-align: center;
 }
@@ -70,7 +70,7 @@
 
 .carousel-bg {
   width: 100%;
-  height: 100vh; /* full screen height */
+  height: 100vh; 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -128,6 +128,8 @@
   text-align: left;
   top: 35%;
 }
+
+
 /* DESCRIPTION */
 
 .description .commitment-header {
@@ -156,10 +158,11 @@
 }
 
 /* OFFER */
+/* OFFER SECTION */
 .our-offer {
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 28px;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
   text-align: center;
   font-family: var(--mainfont);
   text-transform: uppercase;
@@ -169,35 +172,47 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* FLEX GRID */
 .offer-cards {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   padding: 20px 35px;
+  flex-wrap: wrap;
 }
 
+/* CARD BASE (keep original size) */
 .card {
   width: 32%;
   height: 200px;
-  background: white; 
+  background: white;
   border-radius: 10px;
-  /* box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.4); */
   box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
+/* CARD BACKGROUNDS */
 .card1 {
   background: linear-gradient(to right, #2e384d, #008bfd);
 }
+
 .card2 {
   background-color: white;
 }
+
 .card3 {
-    background: linear-gradient(to left, #2e384d, #008bfd);
+  background: linear-gradient(to left, #2e384d, #008bfd);
 }
 
+/* IMAGE */
 .card-img {
   height: 35%;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .card img {
@@ -206,24 +221,82 @@
   object-fit: contain;
 }
 
-.card-text p{
-  font-size: 18px;
-  padding: 15px;
+/* TEXT (responsive only) */
+.card-text p {
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  padding: 15px 20px;
   text-align: justify;
-  word-spacing: -1px;
+  line-height: 1.4;
+  word-spacing: normal;
+  color: inherit;
 }
 
-.offer-items .service {
-   background: linear-gradient(135deg, #1c283d, #008bfd); 
+/* ===========================
+   RESPONSIVE TWEAKS
+=========================== */
+
+/* Tablet (below 992px) */
+@media (max-width: 992px) {
+  .offer-cards {
+    padding: 15px 25px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 48%;
+    height: 200px; /* keep fixed height */
+  }
+
+  .card-text p {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+  }
 }
-.offer-items .verify {
-   background: linear-gradient(135deg, #008bfd, #1c283d); 
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+  .offer-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: 200px; 
+  }
+
+  .card-text p {
+    font-size: clamp(0.78rem, 3.5vw, 0.9rem);
+    text-align: center;
+  }
+
+  .card img {
+    width: 50%;
+  }
 }
+
+/* Extra Small (below 480px) */
+@media (max-width: 480px) {
+  .card {
+    height: 200px;
+  }
+
+  .card-text p {
+    font-size: clamp(0.7rem, 4vw, 0.85rem);
+    line-height: 1.3;
+  }
+
+  .our-offer {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+}
+
+
+/* ACHIEVEMENT */
 
 .achieve {
   text-align: center;
   padding: 4rem 2rem;
-  background: #fff;              /* White background */
+  background: #fff;      
 }
 
 .achieve h2 {
@@ -278,7 +351,7 @@
 
 .uniqueness {
   display: grid;
-  grid-template-columns: 1.8fr 0.7fr;  /* More space for text */
+  grid-template-columns: 1.8fr 0.7fr; 
   align-items: center;
   gap: 3rem;
   padding: 4rem 2rem;
@@ -323,8 +396,8 @@
 }
 
 .uniqueness ul li::before {
-  font-family: "Font Awesome 6 Free"; /* required */
-  content: "\f058";                  /* Checkmark bullet */
+  font-family: "Font Awesome 6 Free"; 
+  content: "\f058";                  
   color: #024a92;
   font-weight: bold;
   position: absolute;
@@ -334,8 +407,6 @@
 
 .uniqueness img {
   width: 100%;
-  /* border-radius: 12px; */
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
 }
 
 /* Responsive: stack text only, hide image */
@@ -365,7 +436,6 @@
 
 .client-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   align-items: center;
