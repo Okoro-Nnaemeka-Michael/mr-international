@@ -1,0 +1,89 @@
+/* gallery.css */
+:root {
+  --mainfont: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: var(--mainfont);
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    font-weight: bold;
+}
+
+.gallery h2 {
+  font-family: var(--mainfont);
+  font-weight: bolder;
+  margin: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.main .banner {
+  background-image: linear-gradient(
+    to right top,
+    rgba(0, 24, 31, 0.7882352941),
+    rgba(0, 24, 31, 0)),
+    url("../assets/stream-skillup/IMG_7497.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 65vh;
+    padding: 5px;
+    position: relative;
+    font-size: 23px;
+    color: white;
+    font-family: var(--mainfont);
+    text-shadow: 0px 1px 10px rgb(19, 18, 18);
+}
+
+.gallery div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 20px;
+  box-shadow:inset 0px 1px 10px #6B939340;
+  padding: 20px 0px;
+  border-radius:3px;
+  text-align: center;
+}
+
+.gallery .image {
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 20px rgba(109, 106, 106, 0.2);
+  opacity: .9;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+}
+
+.gallery .image:hover {
+  box-shadow: 0px 2px 20px rgba(109, 106, 106, 0.8);
+  opacity: 1;
+  height: 205px;
+  
+}
+
+
+@media (max-width: 800px) {
+.gallery > h2 {
+font-size: 23px;
+}}
